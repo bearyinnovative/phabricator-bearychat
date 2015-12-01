@@ -44,7 +44,7 @@ module.exports = function(app, router) {
 
 					superagent
 					.post(sendurl)
-					.send(sendbody)
+					.send(sendbody.result[phid])
 					.set('Accept', 'application/json')
 					.end(function(err, res) {
 						if (!err) {
