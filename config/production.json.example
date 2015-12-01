@@ -3,10 +3,10 @@
     "port": 8083
   },
   "bearychat": {
-    "url": ""
+    "url": "https://hook.bearychat.com/xxx/incoming/xxxxxxxxxxxxxxx" //bearychat上incoming机器人的webhook地址
   },
   "phabricator": {
-    "api": "",
-    "token": ""
+    "api": "http://somedomain:8001", //phabricator服务的访问根地址,比如
+    "token": "api-xxxxxxxxxxxxxxxxxxxxxxxxx" //phabricator服务上生成的Conduit API Token
   }
 }
