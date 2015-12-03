@@ -3,7 +3,7 @@
     "port": 8083
   },
   "bearychat": {
-    "url": "https://hook.bearychat.com/xxx/incoming/xxxxxxxxxxxxxxx" //bearychat上incoming机器人的webhook地址
+    "url": "https://hook.bearychat.com/xxx/phabricator/xxxxxxxxxxxxxxx" //bearychat上phabricator机器人的webhook地址
   },
   "phabricator": {
     "api": "http://somedomain:8001", //phabricator服务的访问根地址,比如
