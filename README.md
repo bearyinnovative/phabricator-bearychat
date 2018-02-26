@@ -26,3 +26,19 @@
 4. 复制config路径下的`production.json.example`到`production.json`, 将`bearychat.url`的参数值设置为刚刚创建的Phabricator机器人的webhook链接, 将`phabricator.api`设置为Phabricator服务的根地址, 将`phabricator.token`设置为在上一步生成好的token.
 5. 启动服务 `NODE_ENV=production node server.js`.
 6. 设置phabricator的webhook, 进入phabricator安装的根路径, 然后运行`./bin/config set feed.http-hooks '["http://$yourhost:$port"]'`, 其中`$yourhost`是这个小服务监听的host, `$port`是这个小服务监听的端口.
+
+## Trouble shoot
+
+1. 对于使用自签名CA证书的用户，请对app.js文件稍作修改，增加`rejectUnauthorized: false`：
+```
+request({
+                                headers: {
+                                        'Content-Length': contentLength,
+                                        'Content-Type': 'application/x-www-form-urlencoded'
+                                },
+                                uri: queryurl,
+                                body: formData,
+                                method: 'POST',
+                                rejectUnauthorized: false
+                        }, function(err, res, body) {
+```
